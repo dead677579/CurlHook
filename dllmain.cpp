@@ -4,10 +4,10 @@
 #include "MinHook.h"
 #include "shit.h"
 
-typedef INT(*Curlopt)(PVOID, INT, va_list);
+typedef INT(*Curlopt)(PVOID, INT, char*);
 Curlopt _CurlSetopt;
 
-INT CurlHook(PVOID curl, INT option, va_list data) {
+INT CurlHook(PVOID curl, INT option, char *data) {
     switch (option) {
     case 64:
         *data = NULL;
