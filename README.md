@@ -1,2 +1,2 @@
 # CurlHook
-hook curl
+Hook curl with minhook
